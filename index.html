@@ -6,9 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Battleground</title>
     <link rel="stylesheet" href="test.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <section>  
+    <button id="button-start">START</button>
+    <div id="menu-bg" class="menu-bg">
+        <h2>Choose the scene</h2><hr>
+        <ul>
+            <li id="button-scene1">Midnight</li>
+            <li id="button-scene2">Forest</li>
+            <li id="button-scene3">Snow</li>
+            <li id="button-scene4">Space</li>
+        </ul>
+    </div>
+    <section id="scene1">  
         <audio id="shortgun-sound" src="shortgun.mp3" autostart="false"></audio>
     </section>
     <script src="main.js"></script>

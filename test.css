@@ -2,10 +2,76 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 body{
     overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: url(./assets/cover2.jpg);
+    background-size: cover;
+    background-position: top;
+    cursor: url('./assets/aim_black_small.png'), pointer;
 }
+/* Button start background */
+#button-start{
+    position: fixed;
+    width: 160px;
+    top: 65%;
+    left: calc(50% - 80px);
+    font-size: 2rem;
+    padding: 15px;
+    background-color: #774235;
+    color: white;
+    box-shadow: 5px 5px 15px 5px rgba(255,157,62,0.75);
+    outline: none;
+    border: none;
+    cursor: url('./assets/aim_red_small.png'), pointer;
+    border-radius: 8px;  
+    transition: 0.4s; 
+}
+#button-start:hover{
+    transform: scale(1.2);
+}
+.menu-bg{
+    position: absolute;
+    width: 600px;
+    height: 127px;
+    top: 82%;
+    left: calc(50% - 300px);
+    background-color: #774235;
+    color: white;
+    border-radius: 8px; 
+    padding: 15px;
+    text-align: center;
+    padding-bottom: 0;
+    transition: 0.4s;
+    transform: translateY(127px);
+    opacity: 0;
+}
+.menu-bg ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+.menu-bg ul li{
+    list-style: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 150px;
+    height: 100%;
+    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-bg ul li:hover{
+    background-color: #4f3032;
+}
+
+/* Each section */
 section{
     position: relative;
     width: 100%;
@@ -14,6 +80,7 @@ section{
     background-size: cover;
     background-position: center;
     cursor: url('./assets/aim_black_small.png'), pointer;
+    animation: fadeInUp 0.6s linear;
 }
 section:active{
     cursor: url('./assets/aim_red_small.png'), pointer;
@@ -43,3 +110,14 @@ section:active{
     0%, 30% {opacity: 1;}
     100% {opacity: 0;}
 }
+@keyframes fadeInUp {
+    0%{
+        opacity: 0;
+        top: -100%;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+

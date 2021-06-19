@@ -1,13 +1,35 @@
-let body = document.querySelector('body');
+// Main page, show menu
+let buttonStart = document.getElementById('button-start')
 
-document.addEventListener('click', function(e){
+buttonStart.addEventListener('click', function(){
+    let menu = document.getElementById('menu-bg');
+    menu.style.transform = "translateY(0)"
+    menu.style.opacity = "1"
+})
+
+// Choose background -> section
+let buttonScene1 = document.getElementById('button-scene1')
+let scene1 = document.getElementById('scene1')
+
+scene1.style.display = "none"
+
+buttonScene1.addEventListener('click', function(){
+    scene1.style.display = "block"
+})
+
+
+
+// Each section
+let section = document.querySelector('section');
+
+section.addEventListener('click', function(e){
     let bullet = document.createElement('span');
     bullet.classList.add('bullet'); //Add class="bullet" for span element
     let x = e.offsetX;
     let y = e.offsetY;
     bullet.style.left = x + 'px';
     bullet.style.top = y + 'px';
-    body.appendChild(bullet);
+    section.appendChild(bullet);
 
     //Add sound on click
     let sound = document.getElementById('shortgun-sound');
@@ -29,7 +51,7 @@ document.addEventListener('click', function(e){
 
     blood.style.left = Math.random() * innerWidth + 'px';
     blood.style.top = Math.random() *innerHeight + 'px';
-    body.appendChild(blood);
+    section.appendChild(blood);
 
     //Remove bullet and blood after 4s
     setTimeout(function(){
