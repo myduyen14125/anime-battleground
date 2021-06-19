@@ -15,10 +15,10 @@ document.addEventListener('click', function(e){
 
     //Add random blood imanges
     let bloodImages = [
-        'url("blood1.png")',
-        'url("blood2.png")',
-        'url("blood3.png")',
-        'url("blood4.png")',
+        'url("./assets/blood1.png")',
+        'url("./assets/blood2.png")',
+        'url("./assets/blood3.png")',
+        'url("./assets/blood4.png")',
     ]
     //Blood appear on screen
     let blood = document.createElement('span');

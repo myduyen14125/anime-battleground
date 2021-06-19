@@ -10,19 +10,19 @@ section{
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url(cover.jpg);
+    background: url(./assets/cover.jpg);
     background-size: cover;
     background-position: center;
-    cursor: url('aim_black_small.png'), pointer;
+    cursor: url('./assets/aim_black_small.png'), pointer;
 }
 section:active{
-    cursor: url('aim_red_small.png'), pointer;
+    cursor: url('./assets/aim_red_small.png'), pointer;
 }
 .bullet{
     position: absolute;
     width: 50px;
     height: 50px;
-    background: url(hole_gun.png);
+    background: url(./assets/hole_gun.png);
     pointer-events: none;
     transform: translateX(-18px);
     transition: 0.3s;
