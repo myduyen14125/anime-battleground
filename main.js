@@ -84,3 +84,23 @@ section.addEventListener('click', function(e){
     }, 4000)
 })
 
+// Setting box
+let setting = document.getElementById("button-setting");
+let dropdown = document.getElementById("drop-down");
+let undo = document.getElementById("undo");
+let volume = document.getElementById("volume");
+let exit = document.getElementById("eixt");
+
+// Show dropdown box
+dropdown.style.display = "none";
+let show = 0;
+setting.addEventListener("click", function(){
+    show++;
+    if(show % 2 !== 0) {
+        dropdown.style.animation = "fadeIn 0.4s ease 1"
+        dropdown.style.display = "block";
+    }
+    else dropdown.style.display = "none";
+})
+// Set function for dropdown box
+

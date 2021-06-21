@@ -71,12 +71,51 @@ body{
     background-color: #4f3032;
 }
 
+/* Button setting */
+.setting{
+    position: absolute;
+    top: 35px;
+    right: 0;
+    z-index: 10;
+    font-size: 1.5rem;
+    width: 50px;
+    background-color: #141722;
+    color: #a4acc4;
+    border: 1px solid #a4acc4;
+    border-right: 0;
+}
+.setting button{
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: #141722;
+    color: #a4acc4;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #a4acc4;
+    cursor: pointer;
+}
+/* Drop down box */
+.setting .drop-down{
+    transition: 0.4s;
+}
+.setting .drop-down .fa{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 4px;
+}
+.setting .drop-down .fa:hover, .setting button:hover{
+    background-color: #0b0d13;
+}
+.setting .drop-down .fa:active, .setting button:active{
+    color: white;
+}
+
 /* Each section */
 section{
     position: relative;
     width: 100%;
     height: 100vh;
-    /* background: url(./assets/cover.jpg); /Set in main.js/  */
     cursor: url('./assets/aim_black_small.png'), pointer;
     animation: fadeIn 0.8s linear;
 }
@@ -112,4 +151,3 @@ section:active{
     0% {opacity: 0;}
     100% {opacity: 1}
 }
-
