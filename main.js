@@ -1,10 +1,18 @@
 // Main page, show menu
 let buttonStart = document.getElementById('button-start')
 
+let showMenu = 0;
 buttonStart.addEventListener('click', function(){
     let menu = document.getElementById('menu-bg');
-    menu.style.transform = "translateY(0)"
-    menu.style.opacity = "1"
+    showMenu++;
+    if(showMenu % 2 != 0){
+        menu.style.transform = "translateY(0)"
+        menu.style.opacity = "1"
+    }
+    else{
+        menu.style.transform = "translateY(127px)"
+        menu.style.opacity = "0"
+    }
 })
 
 // Choose background -> section
@@ -19,6 +27,7 @@ scene.style.display = "none";
 let i;
 
 function changeBg(i){
+    scene.style.animation = "fadeIn 0.8s linear";
     scene.style.display = "block";
     scene.style.background = "url(./assets/cover" + i + ".jpg)";
     scene.style.backgroundSize = "cover";
@@ -43,17 +52,17 @@ buttonScene4.addEventListener('click', function(){
 
 
 
-// Each section
-let section = document.querySelector('section');
+// Each section = each scene
+// let section = document.querySelector('section');
 
-section.addEventListener('click', function(e){
+scene.addEventListener('click', function(e){
     let bullet = document.createElement('span');
     bullet.classList.add('bullet'); //Add class="bullet" for span element
     let x = e.offsetX;
     let y = e.offsetY;
     bullet.style.left = x + 'px';
     bullet.style.top = y + 'px';
-    section.appendChild(bullet);
+    scene.appendChild(bullet);
 
     //Add sound on click
     let sound = document.getElementById('shortgun-sound');
@@ -84,12 +93,12 @@ section.addEventListener('click', function(e){
     }, 4000)
 })
 
-// Setting box
+/* Setting box */
 let setting = document.getElementById("button-setting");
 let dropdown = document.getElementById("drop-down");
 let undo = document.getElementById("undo");
 let volume = document.getElementById("volume");
-let exit = document.getElementById("eixt");
+let exit = document.getElementById("exit");
 
 // Show dropdown box
 dropdown.style.display = "none";
@@ -104,3 +113,8 @@ setting.addEventListener("click", function(){
 })
 // Set function for dropdown box
 
+exit.addEventListener("click", function(){
+    scene.style.animation = "fadeOut 0.8s linear";
+    scene.style.display = "none";
+    dropdown.style.display = "none";
+})

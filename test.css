@@ -117,7 +117,6 @@ section{
     width: 100%;
     height: 100vh;
     cursor: url('./assets/aim_black_small.png'), pointer;
-    animation: fadeIn 0.8s linear;
 }
 section:active{
     cursor: url('./assets/aim_red_small.png'), pointer;
@@ -144,7 +143,7 @@ section:active{
 }
 
 @keyframes fadeOut {
-    0%, 30% {opacity: 1;}
+    0%, 30%{opacity: 1;}
     100% {opacity: 0;}
 }
 @keyframes fadeIn {
