@@ -9,12 +9,36 @@ buttonStart.addEventListener('click', function(){
 
 // Choose background -> section
 let buttonScene1 = document.getElementById('button-scene1')
-let scene1 = document.getElementById('scene1')
+let buttonScene2 = document.getElementById('button-scene2')
+let buttonScene3 = document.getElementById('button-scene3')
+let buttonScene4 = document.getElementById('button-scene4')
+let scene = document.getElementById('scene')
 
-scene1.style.display = "none"
+scene.style.display = "none";
+
+let i;
+
+function changeBg(i){
+    scene.style.display = "block";
+    scene.style.background = "url(./assets/cover" + i + ".jpg)";
+    scene.style.backgroundSize = "cover";
+}
 
 buttonScene1.addEventListener('click', function(){
-    scene1.style.display = "block"
+    i = 1;
+    changeBg(i);
+})
+buttonScene2.addEventListener('click', function(){
+    i = 2;
+    changeBg(i);
+})
+buttonScene3.addEventListener('click', function(){
+    i = 3;
+    changeBg(i);
+})
+buttonScene4.addEventListener('click', function(){
+    i = 4;
+    changeBg(i);
 })
 
 

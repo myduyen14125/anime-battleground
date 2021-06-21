@@ -8,7 +8,7 @@ body{
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    background: url(./assets/cover2.jpg);
+    background: url(./assets/cover.jpg);
     background-size: cover;
     background-position: top;
     cursor: url('./assets/aim_black_small.png'), pointer;
@@ -76,11 +76,9 @@ section{
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url(./assets/cover.jpg);
-    background-size: cover;
-    background-position: center;
+    /* background: url(./assets/cover.jpg); /Set in main.js/  */
     cursor: url('./assets/aim_black_small.png'), pointer;
-    animation: fadeInUp 0.6s linear;
+    animation: fadeIn 0.8s linear;
 }
 section:active{
     cursor: url('./assets/aim_red_small.png'), pointer;
@@ -110,14 +108,8 @@ section:active{
     0%, 30% {opacity: 1;}
     100% {opacity: 0;}
 }
-@keyframes fadeInUp {
-    0%{
-        opacity: 0;
-        top: -100%;
-    }
-    100% {
-        opacity: 1;
-        top: 0;
-    }
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1}
 }
 
