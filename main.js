@@ -84,7 +84,7 @@ scene.addEventListener('click', function(e){
 
     blood.style.left = Math.random() * innerWidth + 'px';
     blood.style.top = Math.random() *innerHeight + 'px';
-    section.appendChild(blood);
+    scene.appendChild(blood);
 
     //Remove bullet and blood after 4s
     setTimeout(function(){
